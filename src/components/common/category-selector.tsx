@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 import { categoryTable } from '@/db/schema'
@@ -13,7 +14,8 @@ export default function CategorySelector({ categories }: CategorySelectorProps) 
             <div className='grid grid-cols-2 gap-3'>
                 {categories.map((category) => (
                     <Button key={category.id} variant="ghost" className='rounded-full bg-white text-xs font-semibold'>
-                        {category.name}
+                        <Link href={`category/${category.slug}`}>{category.name}</Link>
+
                     </Button>
                 ))}
             </div>

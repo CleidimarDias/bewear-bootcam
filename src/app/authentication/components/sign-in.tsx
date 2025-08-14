@@ -112,8 +112,9 @@ const SignInForm = () => {
                 )}
               />
             </CardContent>
-            <CardFooter>
-              <Button type="submit">Entrar</Button>
+            <CardFooter className="flex flex-col gap-4">
+              <Button className="w-full" type="submit">Entrar</Button>
+              <Button className="w-full" type="submit">Entrar com Google</Button>
             </CardFooter>
           </form>
         </Form>
