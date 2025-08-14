@@ -2,6 +2,7 @@ import { desc } from 'drizzle-orm'
 import Image from 'next/image'
 import React from 'react'
 
+import BrandLists from '@/components/common/brand-list'
 import CategorySelector from '@/components/common/category-selector'
 import Footer from '@/components/common/footer'
 import Header from '@/components/common/header'
@@ -26,6 +27,23 @@ export default async function Home() {
 
   })
 
+  const listOfBrands = [
+    {
+      path: "/brands/1.png",
+      id: 1
+    },
+    {
+      path: "/brands/3.png",
+      id: 3
+    },
+    {
+      path: "/brands/5.png",
+      id: 5
+    },
+
+
+  ]
+
   return (
     <>
       <Header />
@@ -41,6 +59,7 @@ export default async function Home() {
           />
         </div>
 
+        <BrandLists listOfBrands={listOfBrands} />
 
         <ProductList products={products} title="Mais vendidos" />
         <div className='p-5'>
